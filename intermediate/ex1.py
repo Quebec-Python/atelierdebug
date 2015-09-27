@@ -1,6 +1,6 @@
 
 
-def myFunction(dictSource, dictTest, tol=0.1):
+def myFunction(dictSource, dictTest, tol=0.2):
     """
     Pour chaque clé dans dictSource (un dictionnaire), cette fonction teste
     si la même clé dans dictTest contient la même valeur, avec une tolerance
@@ -36,8 +36,10 @@ if __name__ == '__main__':
     d1 = {'a' : 25, 'b' : 41.5, 'c' : 88.1}
     d2 = {'b' : 41.55, 'c' : 88, 'd' : 15}
     print("Comparing {} and {} : {}".format(d1, d2, myFunction(d1, d2)))
+    # Devrait être : []
 
 
     d3 = {'a' : 25, 'b' : 41.5, 'c' : 88.1}
     d4 = {'b' : 1e10, 'c' : 88, 'd' : 15}
     print("Comparing {} and {} : {}".format(d3, d4, myFunction(d3, d4)))
+    # Devrait être [(41.5, 1e10)]
