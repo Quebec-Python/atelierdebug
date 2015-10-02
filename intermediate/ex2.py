@@ -3,7 +3,7 @@
 def myFunction(iterableToCheck, allowedRepetitions=2, initSeenItems={}):
     """
     Vérifie que l'itérable iterableToCheck ne contient pas plus de
-    'allowedRepetitions' occurrence de chaque élément unique. Retourne True
+    'allowedRepetitions' occurrences de chaque élément unique. Retourne True
     si c'est le cas, et False sinon. Par exemple, si allowedRepetitions=2,
     l'itérable [1, 3, 5, 5, 8, 9] est valide, mais pas [1, 2, 2, 2, 5, 6, 7].
 
@@ -41,7 +41,5 @@ if __name__ == '__main__':
 
     it2 = [1, 2, 2, 2, 5, 6, 7]
     print("Check iterable {} : {}".format(it2, myFunction(it2)))    # Devrait être False
-
-    it3 = [18, 19, 42, 42, 42, 55]
-    print("Check iterable {} : {}".format(it3, myFunction(it2, allowedRepetitions=3)))  # Devrait être True
+    print("Check iterable {} : {}".format(it2, myFunction(it2, allowedRepetitions=3)))  # Devrait être True
 

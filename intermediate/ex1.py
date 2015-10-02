@@ -9,11 +9,8 @@ def myFunction(dictSource, dictTest, tol=0.2):
     compte de la tolérance demandée), ou une liste vide si toutes les clés
     sont équivalentes.
 
-    Retourne True si tous les éléments de dictSource et dictTest sont égaux
-    (en tenant compte de la tolérance) et False dans le cas contraire.
-
     Si une clé est présente dans dictSource mais pas dans dictTest, elle est
-    ignorée et n'empêche pas la fonction de retouner True.
+    ignorée et n'empêche pas la fonction de retouner une liste.
     """
     retList = []
     for key, val in dictSource.items():
@@ -39,7 +36,7 @@ if __name__ == '__main__':
     # Devrait être : []
 
 
-    d3 = {'a' : 25, 'b' : 41.5, 'c' : 88.1}
+    d3 = {'b' : 41.5, 'c' : 88.1, 'a' : 25}
     d4 = {'b' : 1e10, 'c' : 88, 'd' : 15}
     print("Comparing {} and {} : {}".format(d3, d4, myFunction(d3, d4)))
     # Devrait être [(41.5, 1e10)]
