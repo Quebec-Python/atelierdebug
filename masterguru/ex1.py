@@ -1,41 +1,20 @@
-import dis
-func = """
+#!/usr/bin/env python
+
+# Etant donne ce code:
+code = """
 g = 5
-print(globals().keys())
-[g for i in range(5)]
+x = [g for i in range(5)]
 """
 
 
-func2 = """
-g = 5
-def otherfunc():
-	w = g+2
-"""
-
-def f2():
-	g = 5
-	[g for i in range(5)]
-
-def f():
-	a  = compile(func, "blop", "exec")
-
-	#dis.dis(func)
-	print("###")
-	dis.dis(a.co_consts[1])
-	exec(func, {})
-
-f()
-print("###")
-dis.dis(f2)
-print("###")
-dis.dis(f2.__code__.co_consts[2])
-
-import pdb; pdb.set_trace()
+# Ceci fonctionne:
+exec(code)
+# (Cleanup)
+del g, x
 
 
-def f():
-	k = 2
-	def g():
-		w = k+2
+# Pourquoi est-ce que ceci ne fonctionne pas?
+def f(code_str):
+    exec(code_str)
 
-	g()
+f(code) 
