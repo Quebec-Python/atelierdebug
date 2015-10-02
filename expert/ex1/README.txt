@@ -22,3 +22,11 @@ pystack
 
 Voir l'état de tous les threads:
 thread apply all py-list
+
+# Manhole version
+
+One of these:
+netcat -U /tmp/manhole-1234
+socat - unix-connect:/tmp/manhole-1234
+socat readline unix-connect:/tmp/manhole-1234
+
