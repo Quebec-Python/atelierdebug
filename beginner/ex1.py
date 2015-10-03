@@ -9,8 +9,8 @@ def numericDict(list):
     k = list(range(len(v)))
 
     # Genere un dictionnaire avec les clefs et les valeurs
-    return dict(k, v)
+    return dict(zip(k, v))
 
 
 if __name__ == '__main__':
-    res = numericDict(['a', 'b', 'c']) # Devrait retourner {1: 'a', 2: 'b', 3: 'c'}
+    res = numericDict(['a', 'b', 'c']) # Devrait retourner {0: 'a', 1: 'b', 2: 'c'}
