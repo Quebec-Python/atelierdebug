@@ -60,6 +60,10 @@ def myFunction(tuple1, tuple2):
     # leur modification a levé un TypeError, indiqué par le dernier élément
     # du tuple retourné par computeMeanValues
     assert statsSeq1[3] == False and statsSeq2[3] == False, "Erreur! Tuples modifiés!"
+    
+    # En est-on vraiment certain?
+    print(tuple1)
+    print(tuple2)
 
     import pdb; pdb.set_trace()
 
