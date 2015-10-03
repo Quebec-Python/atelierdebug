@@ -19,4 +19,4 @@ def nombresNonPremiers(n):
 
 
 if __name__ == '__main__':
-    print(nombresNonPremiers(20)) # Devrait afficher [1, 4, 6, 8, 9]
+    print(nombresNonPremiers(10)) # Devrait afficher [1, 4, 6, 8, 9, 10]
