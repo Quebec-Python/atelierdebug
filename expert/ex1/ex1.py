@@ -1,5 +1,8 @@
 import time
 
+# Exemple qui ne termine jamais
+# Voir README.txt
+
 
 def myFunc(a):
     while True:
