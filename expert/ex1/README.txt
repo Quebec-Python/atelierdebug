@@ -7,7 +7,7 @@ Requis: pip install pyrasite
 
 python ex1.py
 
-#get the PID using / (search)
+# Dans un autre terminal, obtenez le PID de votre programme:
 ps aux | grep ex1.py    (ou htop)
 
 pyrasite <PID> payload.py
